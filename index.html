@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Structural Scarcity v2 — Future Economy Strategy & Analyst Upside</title>
+  <meta name="description" content="A public-equity strategy report on AI infrastructure, electrification, industrial bottlenecks and analyst upside.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Structural Scarcity v2">
+  <meta property="og:description" content="Future Economy Strategy · 2026–2035">
+  <meta property="og:image" content="/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Structural Scarcity v2">
+  <meta name="twitter:description" content="Future Economy Strategy · 2026–2035">
+  <meta name="twitter:image" content="/og.png">
+  <style>
+    :root{
+      --ink:#14233a;--muted:#607086;--paper:#f4f6f8;--card:#ffffff;--line:#dfe5eb;
+      --navy:#0b1d33;--blue:#176b87;--cyan:#2fa7b8;--gold:#d3a23a;--green:#17805f;
+      --red:#b44747;--orange:#c16d2d;--soft:#eaf2f4;--shadow:0 10px 30px rgba(15,31,49,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+    .hero{background:
+      radial-gradient(circle at 88% 20%,rgba(47,167,184,.28),transparent 26%),
+      linear-gradient(135deg,#08172a,#102c4a 65%,#123e54);color:#fff;padding:64px 5vw 48px}
+    .hero-inner,.wrap{max-width:1240px;margin:auto}
+    .eyebrow{letter-spacing:.15em;text-transform:uppercase;font-size:11px;font-weight:800;color:#77d0dc}
+    h1{font-size:clamp(36px,5vw,66px);line-height:1.02;letter-spacing:-.045em;margin:12px 0 18px;max-width:1000px}
+    .deck{font-size:19px;line-height:1.55;color:#d4e3ec;max-width:930px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+    .pill{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:7px 11px;color:#e6f2f6;font-size:12px;background:rgba(255,255,255,.05)}
+    .wrap{padding:28px 5vw 70px}
+    .nav{position:sticky;top:0;z-index:5;background:rgba(244,246,248,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{max-width:1240px;margin:auto;padding:10px 5vw;display:flex;gap:18px;overflow:auto;white-space:nowrap;font-weight:700;font-size:12px}
+    .nav a{color:#375066}
+    .grid{display:grid;gap:18px}
+    .g4{grid-template-columns:repeat(4,1fr)}
+    .g3{grid-template-columns:repeat(3,1fr)}
+    .g2{grid-template-columns:repeat(2,1fr)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:22px}
+    .kpi .num{font-size:33px;line-height:1;font-weight:850;letter-spacing:-.04em;color:var(--navy)}
+    .kpi .label{color:var(--muted);font-size:12px;margin-top:8px}
+    h2{font-size:30px;letter-spacing:-.035em;margin:52px 0 18px;line-height:1.15}
+    h3{font-size:19px;margin:0 0 10px;letter-spacing:-.02em}
+    h4{font-size:14px;margin:18px 0 6px;text-transform:uppercase;letter-spacing:.07em;color:#496174}
+    .sub{color:var(--muted);max-width:900px;margin:-8px 0 20px}
+    .callout{border-left:5px solid var(--cyan);background:#eaf5f6;padding:20px 22px;border-radius:0 12px 12px 0;margin:20px 0}
+    .callout strong{color:#0d5568}
+    .callout.warn{border-color:var(--gold);background:#fff7e5}
+    .callout.warn strong{color:#805d12}
+    table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+    th{background:#eef3f6;color:#405367;text-align:left;text-transform:uppercase;letter-spacing:.055em;font-size:10px;padding:11px 10px;border-bottom:1px solid var(--line)}
+    td{padding:11px 10px;border-bottom:1px solid #edf0f3;vertical-align:top;font-size:12px}
+    tr:last-child td{border-bottom:0} tbody tr:hover{background:#f8fbfc}
+    .ticker{font-weight:850;color:var(--navy);font-size:13px}
+    .tiny{font-size:10px;color:var(--muted)}
+    .badge{display:inline-block;padding:3px 7px;border-radius:99px;font-size:10px;font-weight:800;white-space:nowrap}
+    .b-strong{background:#dff2ea;color:#0b6b4b}.b-buy{background:#e4f0fa;color:#175d87}
+    .b-watch{background:#fff0d7;color:#8a5a0c}.b-risk{background:#f8dddd;color:#913636}
+    .up{font-weight:850;color:var(--green)}.down{font-weight:850;color:var(--red)}
+    .score{font-weight:850;font-size:14px}.score small{font-weight:500;color:var(--muted)}
+    .barrow{display:grid;grid-template-columns:32px 250px 1fr 55px;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid #edf0f3}
+    .barrow:last-child{border:0}.rank{font-weight:850;color:#6a7988}.barlabel{font-weight:750}
+    .track{height:9px;border-radius:99px;background:#e8edf1;overflow:hidden}.fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+    .theme-card{position:relative;overflow:hidden}
+    .theme-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--cyan)}
+    .theme-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .theme-rank{font-size:11px;font-weight:850;color:#fff;background:var(--navy);border-radius:99px;padding:5px 9px;white-space:nowrap}
+    .theme-card p{color:#43576b}
+    ul{padding-left:18px;margin:8px 0} li{margin:6px 0}
+    .stock-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+    .pick{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fbfcfd}
+    .pick .head{display:flex;justify-content:space-between;gap:8px}
+    .pick p{font-size:12px;margin:6px 0 0}
+    .matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+    .matrix .cell{border-radius:10px;padding:14px;border:1px solid var(--line);background:#fff}
+    .matrix .cell strong{display:block;font-size:13px}.matrix .cell span{font-size:11px;color:var(--muted)}
+    .matrix .a{border-top:4px solid var(--green)}.matrix .b{border-top:4px solid var(--blue)}.matrix .c{border-top:4px solid var(--gold)}.matrix .d{border-top:4px solid var(--red)}
+    .chain{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:stretch}
+    .chain .node{position:relative;border-radius:11px;padding:16px 12px;color:#fff;min-height:106px}
+    .chain .node:not(:last-child):after{content:"→";position:absolute;right:-16px;top:37px;z-index:2;color:#73879a;font-weight:900;font-size:19px}
+    .chain .node b{display:block;font-size:13px}.chain .node span{display:block;font-size:10px;line-height:1.35;margin-top:7px;color:rgba(255,255,255,.8)}
+    .n1{background:#1b775d}.n2{background:#176b87}.n3{background:#2d699d}.n4{background:#557a96}.n5{background:#7e679d}.n6{background:#a57535}.n7{background:#a94a4a}
+    .thesis-box{background:linear-gradient(135deg,#0c2037,#164e61);color:#fff;border-radius:14px;padding:26px;box-shadow:var(--shadow)}
+    .thesis-box blockquote{font-size:23px;line-height:1.4;letter-spacing:-.025em;margin:5px 0 14px;max-width:1000px}
+    .thesis-box p{color:#cfe0e8;margin-bottom:0}
+    .horizon{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .horizon .lane{border-radius:13px;padding:20px;border:1px solid var(--line);background:#fff}
+    .horizon .lane:first-child{border-top:5px solid var(--cyan)}.horizon .lane:last-child{border-top:5px solid var(--gold)}
+    .overlap td:not(:first-child),.overlap th:not(:first-child){text-align:center}
+    .heat3{background:#f1c7c7;color:#7e2929;font-weight:850}.heat2{background:#f6dfb8;color:#795316;font-weight:850}.heat1{background:#dceee8;color:#17694f;font-weight:850}.heat0{color:#9aa6b2}
+    .stage{counter-reset:stage;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+    .stage .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px;position:relative}
+    .stage .step:before{counter-increment:stage;content:counter(stage);display:inline-grid;place-items:center;width:25px;height:25px;border-radius:50%;background:var(--navy);color:#fff;font-weight:850;font-size:11px;margin-bottom:8px}
+    .stage .step b{display:block;font-size:12px}.stage .step span{font-size:10px;color:var(--muted)}
+    .source-list{columns:2;column-gap:38px}.source-list li{break-inside:avoid;font-size:12px;margin:0 0 10px;color:#4d6071}
+    .footer{background:var(--navy);color:#c8d8e1;padding:35px 5vw;font-size:12px}.footer-inner{max-width:1240px;margin:auto}
+    .no-wrap{white-space:nowrap}
+    @media(max-width:980px){.g4,.g3{grid-template-columns:1fr 1fr}.barrow{grid-template-columns:28px 170px 1fr 48px}.matrix{grid-template-columns:1fr 1fr}.stock-pair{grid-template-columns:1fr}.table-scroll{overflow:auto}.source-list{columns:1}.chain{grid-template-columns:repeat(2,1fr)}.chain .node:not(:last-child):after{display:none}.stage{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.g4,.g3,.g2,.horizon{grid-template-columns:1fr}.hero{padding-top:45px}.wrap{padding-left:18px;padding-right:18px}.barrow{grid-template-columns:26px 1fr 45px}.track{grid-column:2/4}.matrix,.chain,.stage{grid-template-columns:1fr}h2{font-size:25px}}
+    @media print{.nav{display:none}.hero{padding:35px;background:#102c4a!important}.wrap{padding:18px}.card,table{box-shadow:none;break-inside:avoid}a{color:inherit}.theme-card{break-inside:avoid}body{background:#fff}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Future economy strategy · revised investment framework</div>
+      <h1>Structural Scarcity v2</h1>
+      <div class="deck">A 2026–2035 strategy for identifying where AI, electrification and geopolitical resilience become measurable corporate earnings—combined with a current analyst-upside screen for execution over the next 12 months.</div>
+      <div class="meta">
+        <span class="pill">As of 27 July 2026</span>
+        <span class="pill">77 liquid US-listed shares / ADRs screened</span>
+        <span class="pill">Global themes; USD market data</span>
+        <span class="pill">2030–2035 thesis + 12-month target screen</span>
+        <span class="pill">Revised using the Future Economy Roadmap</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#conclusion">Conclusion</a><a href="#hierarchy">Value chain</a><a href="#themes">Theme ranking</a>
+      <a href="#newlanes">New lanes</a><a href="#quality">Quality-adjusted picks</a><a href="#raw">Raw upside</a>
+      <a href="#deepdives">Deep dives</a><a href="#overlap">Overlap</a><a href="#monitor">Monitoring</a><a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="conclusion">
+      <div class="grid g4">
+        <div class="card kpi"><div class="num">12</div><div class="label">distinct research lanes</div></div>
+        <div class="card kpi"><div class="num">27</div><div class="label">stocks on primary + extension boards</div></div>
+        <div class="card kpi"><div class="num">+70%</div><div class="label">highest quality-adjusted target gap: Micron</div></div>
+        <div class="card kpi"><div class="num">5</div><div class="label">A-tier immediate research candidates</div></div>
+      </div>
+
+      <h2>Investment conclusion</h2>
+      <div class="callout">
+        <strong>The power stack is the highest-conviction cluster.</strong> AI compute demand remains exceptional, but the scarcer—and often more durable—profit pools are migrating outward into power generation, grid connections, transformers, switchgear and thermal management. The IEA expects data-centre electricity use to roughly double from 485 TWh in 2025 to 950 TWh in 2030, while more than 2,500 GW of generation, storage and large-load projects already sit in grid queues. Annual grid investment needs to rise about 50% from roughly $400 billion by 2030. <a href="https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary">IEA: Energy & AI</a> · <a href="https://www.iea.org/reports/electricity-2026/grids">IEA: Grids</a>
+      </div>
+      <div class="thesis-box">
+        <div class="eyebrow">Revised central hypothesis</div>
+        <blockquote>As AI increases compute, electricity and data intensity, excess returns should migrate toward indispensable bottlenecks whose supply expands slowly, whose products are difficult to substitute, and whose scarcity converts into backlog, margins, free cash flow and upward earnings revisions.</blockquote>
+        <p>This replaces the looser “software to physical assets” rotation narrative. The investable variable is not whether a company is physical or digital; it is whether scarcity is captured economically before valuation discounts the full benefit.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card">
+          <h3>Best risk-adjusted research basket</h3>
+          <p><b>NVDA, AVGO, VST, NVT, ASML, MU, VRT, MOD, CCJ, ISRG, WMS.</b></p>
+          <p class="tiny">These combine direct exposure, supportive analyst consensus and a credible estimate-revision path. This is a diligence shortlist, not a portfolio or entry instruction.</p>
+        </div>
+        <div class="card">
+          <h3>Highest asymmetric watchlist</h3>
+          <p><b>KTOS, MP, TEM, SYM, UEC.</b></p>
+          <p class="tiny">Raw upside is large, but so are execution, funding, reimbursement, customer-concentration or project-development risks. Require proof before sizing.</p>
+        </div>
+        <div class="card">
+          <h3>Where the market may be too optimistic</h3>
+          <p><b>AI server assemblers, mature automation, and select copper producers.</b></p>
+          <p class="tiny">Low margins, customer concentration, cyclical order patterns or already-full multiples reduce the value of thematic exposure.</p>
+        </div>
+      </div>
+
+      <div class="callout warn">
+        <strong>Analyst target upside is not expected return.</strong> It is a time-stamped consensus gap that may widen after a price fall, may use optimistic out-year earnings, and often ignores dilution, cycle risk or multiple compression. The report therefore separates “raw upside” from “quality-adjusted upside.”
+      </div>
+    </section>
+
+    <section id="hierarchy">
+      <h2>Where economic leverage sits</h2>
+      <p class="sub">The revised framework treats the future economy as a dependency chain rather than a collection of unrelated sectors. Moving right generally increases optionality and competitive churn; moving left generally increases indispensability but can introduce regulation and capital intensity.</p>
+      <div class="chain">
+        <div class="node n1"><b>1 · Power & grid</b><span>Generation, transmission, transformers, switchgear and thermal infrastructure</span></div>
+        <div class="node n2"><b>2 · Compute</b><span>Accelerators, custom silicon, foundry capacity and design tools</span></div>
+        <div class="node n3"><b>3 · Memory & storage</b><span>HBM, DRAM, flash, HDD and enterprise storage</span></div>
+        <div class="node n4"><b>4 · Networking</b><span>Switching, optics, connectors, cabling and high-speed manufacturing</span></div>
+        <div class="node n5"><b>5 · Platforms</b><span>Enterprise, industrial and vertical AI distribution</span></div>
+        <div class="node n6"><b>6 · Physical AI</b><span>Automation, robotics, logistics and autonomy</span></div>
+        <div class="node n7"><b>7 · End markets</b><span>Healthcare, defence, space, water and consumer applications</span></div>
+      </div>
+
+      <h2 style="margin-top:34px">Three-layer portfolio architecture</h2>
+      <div class="grid g3">
+        <div class="card"><span class="badge b-strong">Tier A · bottlenecks</span><h3 style="margin-top:10px">Indispensable infrastructure</h3><p><b>Power/grid, compute, cooling, memory and networking.</b></p><p>Best combination of necessity, exposure proof and near-term earnings measurability. Primary risk is correlated hyperscaler capex and expectations-heavy valuation.</p></div>
+        <div class="card"><span class="badge b-buy">Tier B · adoption</span><h3 style="margin-top:10px">Structural beneficiaries</h3><p><b>Defence, critical minerals, healthcare AI, automation and water.</b></p><p>Attractive duration, but outcomes depend more heavily on procurement, regulation, reimbursement, commodity prices or customer adoption.</p></div>
+        <div class="card"><span class="badge b-watch">Tier C · optionality</span><h3 style="margin-top:10px">Emerging applications</h3><p><b>Space, consumer AI, emerging software and humanoid robotics.</b></p><p>Potentially exceptional winners, but higher imitation, funding, commercialization and valuation risk. Smaller initial sizing and a higher proof threshold are appropriate.</p></div>
+      </div>
+
+      <h2 style="margin-top:34px">Do not confuse the two clocks</h2>
+      <div class="horizon">
+        <div class="lane"><h3>12-month stock clock</h3><p>Analyst targets, earnings revisions, order conversion, entry valuation and the next two to four reporting cycles.</p><p><b>Question:</b> Is there enough unpriced earnings improvement to compensate for downside over the next year?</p></div>
+        <div class="lane"><h3>2030–2035 structural clock</h3><p>Capacity constraints, industry structure, supply response, regulation, substitution and long-run returns on invested capital.</p><p><b>Question:</b> Will this company still control an indispensable bottleneck after competitors and customers respond?</p></div>
+      </div>
+    </section>
+
+    <section id="themes">
+      <h2>Conviction ranking by theme</h2>
+      <p class="sub">The original ten mandates remain intact. Scores blend demand durability, supply scarcity, pricing power, earnings visibility, policy support and valuation risk. They are PM judgment, not analyst consensus.</p>
+      <div class="card" id="themeBars"></div>
+      <div class="matrix" style="margin-top:18px">
+        <div class="cell a"><strong>A · Immediate work</strong><span>Power/grid, AI compute, electrical equipment, cooling</span></div>
+        <div class="cell b"><strong>B+ · Strong watch</strong><span>Semicap/memory, defence, critical minerals</span></div>
+        <div class="cell b"><strong>B · Selective</strong><span>Healthcare AI / medtech, water</span></div>
+        <div class="cell c"><strong>B− · Cycle-gated</strong><span>Industrial automation / robotics</span></div>
+        <div class="cell d"><strong>Pass / proof needed</strong><span>Theme exposure without orders, backlog or earnings conversion</span></div>
+      </div>
+    </section>
+
+    <section id="newlanes">
+      <h2>What the Future Economy review changes</h2>
+      <p class="sub">The roadmap does not overturn the thesis. It improves the research architecture by separating memory/storage and networking, adding construction/engineering adjacencies, and identifying higher-optionality space and software lanes that should not be mixed with core bottlenecks.</p>
+      <div class="grid g3">
+        <div class="card"><h3>Memory becomes standalone</h3><p>HBM supply, DRAM pricing, NAND recovery and enterprise storage have different cycles from semiconductor equipment. <b>MU remains the preferred immediate candidate; SNDK becomes an expectations-heavy extension candidate.</b></p></div>
+        <div class="card"><h3>Networking becomes standalone</h3><p>Cluster performance increasingly depends on switching, optics, connectors and manufacturing. <b>AVGO/ANET remain core; APH, FN and CLS expand the diligence queue.</b></p></div>
+        <div class="card"><h3>Engineering becomes explicit</h3><p>AI capacity must be installed, commissioned and maintained. <b>FIX and EME offer cash-generative construction exposure; POWL offers higher electrical upside with greater cyclicality.</b></p></div>
+      </div>
+
+      <h2 style="margin-top:34px">Extension board: seven newly screened candidates</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Status</th><th>Lane / stock</th><th>Analyst view</th><th>Price → target</th><th>Upside</th><th>Strategic value</th><th>Why it is not yet A-tier</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Networking components</div><a class="ticker" href="https://www.tipranks.com/stocks/aph">APH</a><div>Amphenol · Score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$152.67 → $192.70</td><td class="up">+26.2%</td><td>Diversified high-speed interconnect and connector content with strong quality characteristics.</td><td>41.7× trailing P/E and broad end-market exposure dilute the pure AI attribution.</td></tr>
+            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Optical manufacturing</div><a class="ticker" href="https://www.tipranks.com/stocks/fn">FN</a><div>Fabrinet · Score 8</div></td><td><span class="badge b-buy">Buy</span><div class="tiny">Top analysts: Buy</div></td><td>$476.04 → $763.67</td><td class="up">+60.4%</td><td>Manufacturing leverage to optical modules and high-speed connectivity demand.</td><td>Customer concentration, manufacturing margins and a large target gap require order-level proof.</td></tr>
+            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">AI systems manufacturing</div><a class="ticker" href="https://www.tipranks.com/stocks/cls">CLS</a><div>Celestica · Score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$305.28 → $456.50</td><td class="up">+49.5%</td><td>Scaled manufacturing exposure to networking and AI data-centre systems with strong composite signals.</td><td>Concentration, lower structural margins than component owners and earnings-date volatility.</td></tr>
+            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Flash / storage</div><a class="ticker" href="https://www.tipranks.com/stocks/sndk">SNDK</a><div>SanDisk · Score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$1,436.56 → $2,052.50</td><td class="up">+42.9%</td><td>Cleaner flash and storage exposure strengthens the standalone memory research lane.</td><td>Extreme prior price appreciation, 47× trailing P/E and cyclical NAND supply response.</td></tr>
+            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Electrical systems</div><a class="ticker" href="https://www.tipranks.com/stocks/powl">POWL</a><div>Powell Industries · Score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Buy</div></td><td>$232.21 → $352.64</td><td class="up">+51.9%</td><td>Direct switchgear and electrical-distribution exposure to utility, industrial and data-centre buildout.</td><td>Smaller scale, 45× trailing P/E, strong prior rally and top-analyst rating divergence.</td></tr>
+            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Mechanical construction</div><a class="ticker" href="https://www.tipranks.com/stocks/fix">FIX</a><div>Comfort Systems · Score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$1,733.60 → $2,164.86</td><td class="up">+24.9%</td><td>Installs mission-critical HVAC, electrical and mechanical systems that turn data-centre plans into operating capacity.</td><td>High expectations after a strong rally, labour availability and project execution risk.</td></tr>
+            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Electrical / mechanical construction</div><a class="ticker" href="https://www.tipranks.com/stocks/eme">EME</a><div>EMCOR · Score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$744.85 → $973.20</td><td class="up">+30.7%</td><td>More attractively valued installation and services exposure with broad commercial and industrial demand.</td><td>Less-pure AI attribution and exposure to project timing and commercial construction conditions.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tiny">TipRanks snapshot retrieved 27 July 2026. These are extension candidates, not automatic promotions to the primary board.</p>
+    </section>
+
+    <section id="quality">
+      <h2>Best-rated stocks with the most credible upside</h2>
+      <p class="sub">Twenty preferred names—two per theme. “Smart Score” is TipRanks’ 1–10 composite; consensus and targets are from all covering analysts. Prices are the latest close in the retrieved 27 July 2026 snapshot.</p>
+      <div class="table-scroll">
+        <table id="qualityTable">
+          <thead><tr><th>Tier</th><th>Theme / stock</th><th>Analyst view</th><th>Price → target</th><th>Upside</th><th>Why the target can work</th><th>First rejection / risk</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="tiny">Source for every price, target, consensus and Smart Score: linked TipRanks stock page. Targets can change without notice. Broad-consensus “Strong Buy” is displayed as Strong Buy.</p>
+    </section>
+
+    <section id="raw">
+      <h2>Raw analyst-upside leaderboard</h2>
+      <p class="sub">This is deliberately not the recommendation list. It shows why simply sorting by target gap produces a speculative portfolio.</p>
+      <div class="grid g2">
+        <div class="card">
+          <h3>Strong Buy / Buy names with the largest target gaps</h3>
+          <div id="rawBars"></div>
+        </div>
+        <div class="card">
+          <h3>How to interpret the extreme upside</h3>
+          <ul>
+            <li><b>UEC / NXE:</b> development and contracting optionality, but no conventional earnings anchor.</li>
+            <li><b>KTOS / AVAV:</b> attractive autonomous-systems demand; targets require production ramps and margin conversion.</li>
+            <li><b>MP:</b> strategic policy support and vertical integration; economics remain sensitive to commissioning, rare-earth pricing and capital intensity.</li>
+            <li><b>TMDX / TEM:</b> powerful category growth; reimbursement, adoption and operating leverage still need to be proven.</li>
+            <li><b>MU:</b> the rare high-upside name with a profitable earnings base and Smart Score 9, but memory remains cyclical.</li>
+          </ul>
+          <div class="callout warn" style="margin-bottom:0"><strong>Screen rule:</strong> do not advance an extreme-upside name unless the thesis can be tied to an observable order, production, reimbursement, backlog, utilization or free-cash-flow milestone.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="deepdives">
+      <h2>Original ten mandate deep dives</h2>
+      <p class="sub">Each card identifies the demand engine, what is already priced in, the preferred analyst-rated expressions and the evidence that would invalidate the thesis.</p>
+      <div class="grid g2" id="themeCards"></div>
+    </section>
+
+    <section>
+      <h2>Candidate funnel and false positives</h2>
+      <div class="grid g3">
+        <div class="card">
+          <h3>A · Advance to deeper work</h3>
+          <p><b>NVDA, VST, NVT, MU, VRT.</b></p>
+          <p>Clear exposure proof, positive estimate path and meaningful target gap. Still entry- and valuation-gated.</p>
+        </div>
+        <div class="card">
+          <h3>B · Watchlist / needs trigger</h3>
+          <p><b>AVGO, CEG, ETN, ASML, MOD, CCJ, MP, KTOS, AVAV, ISRG, TEM, WMS, XYL, SYM, TER, APH, FN, CLS, SNDK, POWL, FIX, EME.</b></p>
+          <p>High-quality or high-upside candidates needing earnings, contract, valuation or execution confirmation.</p>
+        </div>
+        <div class="card">
+          <h3>C / reject for now</h3>
+          <p><b>AMD, DELL, ROK, LMT, GD, SCCO, LAC, GRC.</b></p>
+          <p>Either target gap is thin, consensus is neutral/negative, exposure has weak profit conversion, or raw upside is development-risk rather than mispricing.</p>
+        </div>
+      </div>
+      <div class="table-scroll" style="margin-top:18px">
+        <table>
+          <thead><tr><th>Name</th><th>Why it surfaced</th><th>Why it is deprioritized</th><th>Re-entry condition</th></tr></thead>
+          <tbody>
+            <tr><td class="ticker">AMD</td><td>AI accelerator share challenger; Strong Buy.</td><td>Only 9.3% target gap after a very large run; 169× trailing P/E in the snapshot.</td><td>Material target revisions from share gains, or valuation reset.</td></tr>
+            <tr><td class="ticker">DELL</td><td>AI server shipment growth.</td><td>7.6% target gap, low-margin assembly economics and working-capital sensitivity.</td><td>Attach-rate / services mix produces durable margin expansion.</td></tr>
+            <tr><td class="ticker">ROK</td><td>Pure industrial automation leader.</td><td>3.9% target gap and 48× trailing P/E; recovery appears largely priced.</td><td>Orders inflect before the multiple expands further.</td></tr>
+            <tr><td class="ticker">SCCO</td><td>High-quality, low-cost copper exposure.</td><td>Sell consensus and −11.9% target gap at the snapshot price.</td><td>Copper price or volume outlook drives target upgrades.</td></tr>
+            <tr><td class="ticker">LMT / GD</td><td>Defence budget duration and backlog.</td><td>Neutral / low-upside setups of 4.5% and 1.3% respectively.</td><td>Estimate revisions from faster awards and production conversion.</td></tr>
+            <tr><td class="ticker">LAC</td><td>127% raw target gap.</td><td>Neutral consensus, Smart Score 2 and project-financing / execution dependence.</td><td>Financing, permits and construction milestones materially de-risked.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="overlap">
+      <h2>Factor-overlap map: where diversification is illusory</h2>
+      <p class="sub">The matrix maps economic dependence rather than sector labels. A portfolio can own ten different tickers and still be one concentrated bet on hyperscaler capital expenditure.</p>
+      <div class="table-scroll">
+        <table class="overlap">
+          <thead><tr><th>Exposure cluster</th><th>Representative names</th><th>Hyperscaler AI capex</th><th>Power / grid build</th><th>Memory cycle</th><th>Industrial capex</th><th>Government / policy</th></tr></thead>
+          <tbody>
+            <tr><td><b>Compute silicon</b></td><td class="ticker">NVDA, AVGO</td><td class="heat3">High</td><td class="heat1">Low</td><td class="heat1">Low</td><td class="heat1">Low</td><td class="heat1">Low</td></tr>
+            <tr><td><b>Memory & storage</b></td><td class="ticker">MU, SNDK</td><td class="heat2">Medium</td><td class="heat0">—</td><td class="heat3">High</td><td class="heat1">Low</td><td class="heat1">Low</td></tr>
+            <tr><td><b>Networking & interconnect</b></td><td class="ticker">ANET, APH, FN, CLS</td><td class="heat3">High</td><td class="heat0">—</td><td class="heat0">—</td><td class="heat1">Low</td><td class="heat0">—</td></tr>
+            <tr><td><b>Cooling & electrical</b></td><td class="ticker">VRT, NVT, POWL, FIX</td><td class="heat2">Medium</td><td class="heat3">High</td><td class="heat0">—</td><td class="heat2">Medium</td><td class="heat1">Low</td></tr>
+            <tr><td><b>Power generation</b></td><td class="ticker">VST, CEG</td><td class="heat2">Medium</td><td class="heat3">High</td><td class="heat0">—</td><td class="heat1">Low</td><td class="heat3">High</td></tr>
+            <tr><td><b>Engineering & construction</b></td><td class="ticker">EME, FIX</td><td class="heat1">Low</td><td class="heat3">High</td><td class="heat0">—</td><td class="heat3">High</td><td class="heat2">Medium</td></tr>
+            <tr><td><b>Strategic resources & defence</b></td><td class="ticker">CCJ, MP, KTOS</td><td class="heat0">—</td><td class="heat2">Medium</td><td class="heat0">—</td><td class="heat1">Low</td><td class="heat3">High</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout warn"><strong>Portfolio implication:</strong> size the common driver, not merely each ticker. The compute, networking, cooling and power sleeves all weaken if AI capital expenditure decelerates; power, engineering, water and defence provide better diversification only when their non-data-centre order books are independently healthy.</div>
+    </section>
+
+    <section id="monitor">
+      <h2>Monitoring system: convert the thesis into decisions</h2>
+      <p class="sub">The roadmap’s strategic questions become useful when each one has an observable signal, a warning condition and a predetermined research action.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Monthly signal</th><th>Evidence that strengthens the thesis</th><th>Warning / kill signal</th><th>Research action</th></tr></thead>
+          <tbody>
+            <tr><td><b>AI capex & monetisation</b></td><td>Cloud capex rises with improving AI revenue, utilization and return commentary.</td><td>Capex guides fall, utilization weakens or AI revenue lags depreciation growth.</td><td>Cut common-factor exposure; revisit compute and networking assumptions.</td></tr>
+            <tr><td><b>Power & grid</b></td><td>Interconnection queues, utility capex, pricing and multi-year backlogs remain elevated.</td><td>Project cancellations, regulatory disallowance or falling lead times without volume growth.</td><td>Separate regulated returns from merchant-power optionality.</td></tr>
+            <tr><td><b>Memory & storage</b></td><td>HBM / enterprise SSD mix rises, contract pricing holds and inventories remain controlled.</td><td>Bit-supply growth exceeds demand, inventories rise or pricing rolls over.</td><td>Reduce cycle multiples and advance only names with cost or mix leadership.</td></tr>
+            <tr><td><b>Networking & interconnect</b></td><td>800G / 1.6T adoption, switch demand and optical content per cluster accelerate.</td><td>Customer concentration rises while orders, lead times or gross margin weaken.</td><td>Test whether share gains offset slower cluster growth.</td></tr>
+            <tr><td><b>Cooling, electrical & engineering</b></td><td>Backlog converts without margin erosion; liquid-cooling and retrofit mix expand.</td><td>Book-to-bill falls below one, cancellations rise or labor constraints delay conversion.</td><td>Rebuild the revenue-to-cash bridge and revise capacity assumptions.</td></tr>
+            <tr><td><b>Macro & credit</b></td><td>Real yields stabilize, credit spreads remain contained and industrial orders broaden.</td><td>Higher real rates, widening spreads or a sharp oil shock compress demand and multiples.</td><td>Raise discount rates; favor funded backlogs and balance-sheet strength.</td></tr>
+            <tr><td><b>Policy & geopolitics</b></td><td>Grid, nuclear, defence and reshoring appropriations become signed contracts.</td><td>Export controls, licensing delays or procurement slippage impair addressable markets.</td><td>Probability-weight policy revenue; avoid treating announcements as orders.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 style="margin-top:22px">Five-stage underwriting gate</h3>
+      <div class="stage">
+        <div class="step"><b>Theme validity</b><span>Is demand structural, funded and still accelerating?</span></div>
+        <div class="step"><b>Exposure proof</b><span>Does the company earn material revenue and profit from it?</span></div>
+        <div class="step"><b>Earnings bridge</b><span>Can backlog, pricing and capacity become cash flow?</span></div>
+        <div class="step"><b>Valuation range</b><span>What growth is priced in under bear, base and bull cases?</span></div>
+        <div class="step"><b>Entry & sizing</b><span>What milestone, price and factor budget justify ownership?</span></div>
+      </div>
+    </section>
+
+    <section id="risks">
+      <h2>Cross-theme portfolio risks</h2>
+      <div class="grid g3">
+        <div class="card"><h3>One capex cycle in disguise</h3><p>AI chips, power, cooling, electrical gear and semicap are correlated through hyperscaler capital spending. Owning all five is diversification by ticker, not necessarily by economic driver.</p></div>
+        <div class="card"><h3>Valuation and duration</h3><p>Many leaders trade on out-year earnings. Higher real rates or slower backlog conversion can compress multiples even if end-demand remains intact.</p></div>
+        <div class="card"><h3>Policy and geopolitics</h3><p>Semiconductor export controls, defence procurement, nuclear licensing, mineral subsidies and infrastructure funding can change addressable markets or timing.</p></div>
+        <div class="card"><h3>Supply response</h3><p>Scarcity rents invite capacity. Transformer, cooling, HBM and power-equipment margins can normalize once new plants qualify and utilization rises.</p></div>
+        <div class="card"><h3>Execution concentration</h3><p>High-upside names often depend on one mine, one programme, one customer, one reimbursement code or one production ramp.</p></div>
+        <div class="card"><h3>Theme ≠ stock</h3><p>A strong market does not guarantee attractive equity returns. The entry price, earnings revisions, balance sheet and dilution path determine the stock outcome.</p></div>
+      </div>
+      <div class="callout">
+        <strong>Suggested next diligence order:</strong> (1) rebuild revenue and margin bridges for MU, VST, NVT, VRT and NVDA; (2) back-solve what growth their current prices require; (3) create bear/base/bull valuation ranges; (4) add dated prove/kill milestones; and only then decide entry levels or position size.
+      </div>
+    </section>
+
+    <section id="method">
+      <h2>Methodology and evidence posture</h2>
+      <div class="grid g2">
+        <div class="card">
+          <h3>Screen construction</h3>
+          <ol>
+            <li>Translated the user’s macro playbook and Future Economy Research Roadmap into 12 thematic pathways: memory/storage was separated from semiconductor equipment, networking/interconnect became standalone, and engineering/construction was added as a cross-theme execution lens.</li>
+            <li>Screened a 77-name liquid US-listed / ADR universe across structural bottlenecks, adoption beneficiaries and optionality.</li>
+            <li>Retrieved current price, market cap, Smart Score, broad consensus, best-performing-analyst consensus and average 12-month target.</li>
+            <li>Excluded or penalized thin target gaps, neutral / negative consensus, weak exposure attribution and extreme execution dependence.</li>
+            <li>Ranked the survivors by theme durability, earnings visibility, estimate-revision potential, valuation risk and falsifiability.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Important limitations</h3>
+          <ul>
+            <li>Consensus targets are point-in-time market data, not independently modelled fair values.</li>
+            <li>Coverage breadth differs by stock; the tool did not expose analyst counts in the portfolio snapshot.</li>
+            <li>Trailing P/E is not comparable across cyclical, pre-profit and recently restructured companies.</li>
+            <li>The screen is global-thematic but US-listing-biased; several European and Asian leaders are underrepresented.</li>
+            <li>No portfolio constraints, tax position, base currency or risk budget were provided.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Source ledger</h2>
+      <ol class="source-list">
+        <li><b>User-supplied Future Economy Research Roadmap and Macro Investment Playbook (2026–2027)</b> — strategic hierarchy, question framework, two-clock research horizon, capital-rotation thesis and monitoring priorities. Treated as a hypothesis framework, then tested against external operating and market evidence.</li>
+        <li><a href="https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary">IEA, Key Questions on Energy and AI (2026)</a> — data-centre power demand, bottlenecks and scenarios.</li>
+        <li><a href="https://www.iea.org/reports/electricity-2026/grids">IEA, Electricity 2026: Grids</a> — connection queues, component prices and investment requirement.</li>
+        <li><a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai">IEA, Energy demand from AI</a> — accelerated server and cooling contribution.</li>
+        <li><a href="https://www.semi.org/en/semi-press-release/global-semiconductor-equipment-sales-projected-to-reach-a-record-of-156-billion-dollars-in-2027-semi-reports">SEMI, equipment forecast (Dec. 2025)</a> and <a href="https://www.semi.org/en/products-services/market-data/equipment-article-archive">SEMI 2026 archive</a> — wafer-fab and packaging demand.</li>
+        <li><a href="https://ifr.org/img/worldrobotics/Executive_Summary_WR_2025_Industrial_Robots.pdf">International Federation of Robotics, World Robotics 2025</a> — industrial robot installations.</li>
+        <li><a href="https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary">IEA, Global Critical Minerals Outlook 2026</a> — copper deficit, supply concentration and investment trends.</li>
+        <li><a href="https://www.nato.int/en/what-we-do/introduction-to-nato/defence-expenditures-and-natos-5-commitment">NATO, 5% defence commitment (updated June 2026)</a> — spending framework and timing.</li>
+        <li><a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices">FDA, AI-enabled medical devices</a> — authorized device landscape and regulatory context.</li>
+        <li><a href="https://www.epa.gov/system/files/documents/2023-09/Seventh%20DWINSA_September2023_Final.pdf">US EPA, 7th Drinking Water Infrastructure Needs Survey</a> — $625 billion 20-year US need.</li>
+        <li><a href="https://www.worldbank.org/ext/en/topic/water">World Bank, Water</a> — global water and sanitation investment need.</li>
+        <li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx">NVIDIA Q1 FY2027 results</a> — data-centre growth and platform evidence.</li>
+        <li><a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial">Broadcom Q2 FY2026 results</a> — AI semiconductor growth and guidance.</li>
+        <li><a href="https://www.tipranks.com">TipRanks</a> — prices, Smart Scores, analyst consensus and average 12-month targets, retrieved 27 July 2026.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <b>Structural Scarcity v2 · research-priority report—not personal investment advice.</b> “Advance” means advance to deeper underwriting, not buy. Market prices and analyst targets may have changed since the 27 July 2026 freeze time. All percentages are analyst-implied price appreciation and exclude dividends, taxes, FX and transaction costs.
+    </div>
+  </footer>
+
+  <script>
+    const themes = [
+      {rank:1,name:"Power Generation & Grid Modernisation",score:9.4},
+      {rank:2,name:"AI Compute Infrastructure",score:9.2},
+      {rank:3,name:"Electrical Equipment & Transformers",score:9.0},
+      {rank:4,name:"Cooling & HVAC Infrastructure",score:8.8},
+      {rank:5,name:"Semiconductor Equipment & Memory",score:8.5},
+      {rank:6,name:"Defence & Aerospace",score:8.3},
+      {rank:7,name:"Copper, Uranium & Critical Minerals",score:8.1},
+      {rank:8,name:"Healthcare AI & Medical Technology",score:7.8},
+      {rank:9,name:"Water Infrastructure",score:7.6},
+      {rank:10,name:"Industrial Automation & Robotics",score:7.3}
+    ];
+    document.querySelector("#themeBars").innerHTML = themes.map(t=>`
+      <div class="barrow"><div class="rank">${t.rank}</div><div class="barlabel">${t.name}</div>
+      <div class="track"><div class="fill" style="width:${t.score*10}%"></div></div><div class="score">${t.score}<small>/10</small></div></div>`).join("");
+
+    const picks = [
+      {tier:"A",theme:"AI Compute",ticker:"NVDA",name:"NVIDIA",score:9,cons:"Strong Buy",best:"Strong Buy",price:206.84,target:309.94,up:49.9,
+       why:"Full-stack accelerator, networking and software economics; Q1 FY2027 data-centre revenue rose 92% YoY, leaving room for continued estimate revisions.",risk:"Hyperscaler capex digestion, custom ASIC share gains, China/export limits or gross-margin normalization.",url:"https://www.tipranks.com/stocks/nvda"},
+      {tier:"B",theme:"AI Compute",ticker:"AVGO",name:"Broadcom",score:10,cons:"Strong Buy",best:"Strong Buy",price:381.92,target:509.82,up:33.5,
+       why:"Custom accelerators plus Ethernet networking broaden AI exposure; Q2 FY2026 AI semiconductor revenue grew 143% YoY.",risk:"Customer concentration, supply timing, AI mix pressure on gross margin and a full valuation.",url:"https://www.tipranks.com/stocks/avgo"},
+      {tier:"A",theme:"Power / Grid",ticker:"VST",name:"Vistra",score:9,cons:"Strong Buy",best:"Strong Buy",price:163.38,target:226.91,up:38.9,
+       why:"Scarce dispatchable generation and long-duration data-centre contracting can lift asset utilization and cash-flow visibility.",risk:"Power-price reversal, contract slippage, regulatory intervention or overpayment for growth.",url:"https://www.tipranks.com/stocks/vst"},
+      {tier:"B",theme:"Power / Grid",ticker:"CEG",name:"Constellation Energy",score:6,cons:"Strong Buy",best:"Strong Buy",price:274.35,target:365.63,up:33.3,
+       why:"Largest clean firm nuclear fleet is well placed for 24/7 power demand and potential long-term hyperscaler contracts.",risk:"Deal finalization, grid rules, nuclear operations and expectations already embedded in the share price.",url:"https://www.tipranks.com/stocks/ceg"},
+      {tier:"A",theme:"Electrical Equipment",ticker:"NVT",name:"nVent Electric",score:9,cons:"Strong Buy",best:"Strong Buy",price:151.79,target:197.13,up:29.9,
+       why:"Electrical connection/protection plus liquid-cooling exposure; order growth and capacity additions create multi-year revenue visibility.",risk:"Copper/input inflation, capacity-ramp inefficiency or faster-than-expected normalization.",url:"https://www.tipranks.com/stocks/nvt"},
+      {tier:"B",theme:"Electrical Equipment",ticker:"ETN",name:"Eaton",score:8,cons:"Strong Buy",best:"Strong Buy",price:404.07,target:460.91,up:14.1,
+       why:"High-quality installed base, backlog and pricing power across data centres, utilities and commercial electrification.",risk:"Only modest target gap; the market already pays for backlog durability and margin expansion.",url:"https://www.tipranks.com/stocks/etn"},
+      {tier:"B",theme:"Automation / Robotics",ticker:"TER",name:"Teradyne",score:10,cons:"Strong Buy",best:"Strong Buy",price:349.92,target:452.75,up:29.4,
+       why:"Semiconductor test growth plus collaborative/mobile robotics optionality; new GPU and optical test wins can raise estimates.",risk:"Premium multiple, customer concentration and uneven robotics demand.",url:"https://www.tipranks.com/stocks/ter"},
+      {tier:"B",theme:"Automation / Robotics",ticker:"SYM",name:"Symbotic",score:4,cons:"Buy",best:"Buy",price:40.15,target:66.89,up:66.6,
+       why:"Warehouse automation converts labour scarcity into a long deployment runway and recurring software/service opportunity.",risk:"Customer concentration, fixed-price execution, cash conversion and rollout timing.",url:"https://www.tipranks.com/stocks/sym"},
+      {tier:"A",theme:"Semicap / Memory",ticker:"MU",name:"Micron",score:9,cons:"Strong Buy",best:"Strong Buy",price:920.95,target:1569.29,up:70.4,
+       why:"HBM and server DRAM content growth improve mix and pricing; the target gap implies the Street expects the earnings cycle to remain stronger for longer.",risk:"Memory supply response, capex overshoot, customer inventory correction or target estimates anchored near cycle peak.",url:"https://www.tipranks.com/stocks/mu"},
+      {tier:"B",theme:"Semicap / Memory",ticker:"ASML",name:"ASML",score:10,cons:"Strong Buy",best:"Strong Buy",price:1757.09,target:2377.79,up:35.3,
+       why:"EUV monopoly-like economics and rising lithography intensity make ASML the cleanest equipment toll road on leading-edge compute.",risk:"China controls, customer capex timing, High-NA adoption pace and valuation.",url:"https://www.tipranks.com/stocks/asml"},
+      {tier:"A",theme:"Cooling / HVAC",ticker:"VRT",name:"Vertiv",score:9,cons:"Strong Buy",best:"Strong Buy",price:290.36,target:391.29,up:34.8,
+       why:"AI rack power density shifts the bottleneck to thermal management; Vertiv combines liquid cooling, power conditioning and global service.",risk:"71× trailing P/E, exceptionally strong share performance, hyperscaler concentration and margin normalization.",url:"https://www.tipranks.com/stocks/vrt"},
+      {tier:"B",theme:"Cooling / HVAC",ticker:"MOD",name:"Modine",score:9,cons:"Strong Buy",best:"Strong Buy",price:241.79,target:343.50,up:42.1,
+       why:"Smaller-cap pure-play leverage to data-centre air and liquid cooling gives stronger earnings torque than diversified HVAC peers.",risk:"107× trailing P/E, capacity execution, customer concentration and cyclicality.",url:"https://www.tipranks.com/stocks/mod"},
+      {tier:"B",theme:"Critical Minerals",ticker:"CCJ",name:"Cameco",score:6,cons:"Strong Buy",best:"Strong Buy",price:87.86,target:125.53,up:42.9,
+       why:"Tier-one uranium resources, contracting leverage and Westinghouse exposure provide a higher-quality expression of nuclear restarts.",risk:"Uranium-price volatility, operational delivery, contract timing and a high trailing multiple.",url:"https://www.tipranks.com/stocks/ccj"},
+      {tier:"B",theme:"Critical Minerals",ticker:"MP",name:"MP Materials",score:6,cons:"Strong Buy",best:"Strong Buy",price:41.30,target:77.71,up:88.2,
+       why:"US mine-to-magnet integration, policy support and strategic offtake can re-rate the business as separation and magnet output qualify.",risk:"Commissioning, rare-earth price exposure, China-linked inputs, funding needs and dilution.",url:"https://www.tipranks.com/stocks/mp"},
+      {tier:"B",theme:"Defence",ticker:"KTOS",name:"Kratos Defense",score:5,cons:"Strong Buy",best:"Strong Buy",price:47.35,target:96.08,up:102.9,
+       why:"Uncrewed systems, hypersonics and space ground infrastructure align with procurement priorities and can produce multi-year growth.",risk:"Heavy capital spend, programme timing, free-cash-flow pressure and possible financing dilution.",url:"https://www.tipranks.com/stocks/ktos"},
+      {tier:"B",theme:"Defence",ticker:"AVAV",name:"AeroVironment",score:5,cons:"Strong Buy",best:"Strong Buy",price:149.51,target:225.50,up:50.8,
+       why:"Loitering munitions and autonomous systems sit in the fastest-growing defence demand pockets, with replenishment and allied demand as catalysts.",risk:"Award timing, integration, production scale, budget mix and margin volatility.",url:"https://www.tipranks.com/stocks/avav"},
+      {tier:"B",theme:"Healthcare AI / Medtech",ticker:"TEM",name:"Tempus AI",score:9,cons:"Buy",best:"Buy",price:42.69,target:65.77,up:54.1,
+       why:"Proprietary clinical/molecular data and testing scale can compound into higher-margin data services and biopharma partnerships.",risk:"Reimbursement, acquisition integration, commercial spend, dilution and a still-unproven long-run margin structure.",url:"https://www.tipranks.com/stocks/tem"},
+      {tier:"B",theme:"Healthcare AI / Medtech",ticker:"ISRG",name:"Intuitive Surgical",score:8,cons:"Strong Buy",best:"Buy",price:337.50,target:492.63,up:46.0,
+       why:"Installed-base flywheel, recurring instruments and procedure expansion create unusually durable medtech economics; AI-guided workflows add optionality.",risk:"Premium valuation, procedure softness, hospital capital budgets, competition and slower adoption of new indications.",url:"https://www.tipranks.com/stocks/isrg"},
+      {tier:"B",theme:"Water",ticker:"WMS",name:"Advanced Drainage Systems",score:8,cons:"Strong Buy",best:"Strong Buy",price:141.84,target:184.43,up:30.0,
+       why:"Share gains from concrete/legacy materials plus stormwater and onsite wastewater expansion support above-market growth and margin resilience.",risk:"Construction cyclicality, resin and freight costs, and infrastructure project timing.",url:"https://www.tipranks.com/stocks/wms"},
+      {tier:"B",theme:"Water",ticker:"XYL",name:"Xylem",score:6,cons:"Buy",best:"Buy",price:119.75,target:147.50,up:23.2,
+       why:"Broad pumps, treatment, metering and analytics portfolio provides recurring exposure to municipal and industrial water efficiency.",risk:"Flat orders/backlog pressure, funding normalization, high rates and execution on the earnings ramp.",url:"https://www.tipranks.com/stocks/xyl"}
+    ];
+    const badge = c => c==="Strong Buy" ? "b-strong" : "b-buy";
+    document.querySelector("#qualityTable tbody").innerHTML = picks.map(p=>`
+      <tr>
+        <td><span class="badge ${p.tier==="A"?"b-strong":"b-watch"}">${p.tier}</span></td>
+        <td><div class="tiny">${p.theme}</div><a class="ticker" href="${p.url}">${p.ticker}</a><div>${p.name}</div><div class="tiny">Smart Score ${p.score}/10</div></td>
+        <td><span class="badge ${badge(p.cons)}">${p.cons}</span><div class="tiny">Top analysts: ${p.best}</div></td>
+        <td class="no-wrap">$${p.price.toFixed(2)} → $${p.target.toFixed(2)}</td>
+        <td class="up">+${p.up.toFixed(1)}%</td>
+        <td>${p.why}</td><td>${p.risk}</td>
+      </tr>`).join("");
+
+    const raw = [
+      ["UEC",110.9,4,"Strong Buy"],["KTOS",102.9,5,"Strong Buy"],["MP",88.2,6,"Strong Buy"],
+      ["TMDX",71.4,6,"Strong Buy"],["MU",70.4,9,"Strong Buy"],["SYM",66.6,4,"Buy"],
+      ["NXE",62.9,2,"Strong Buy"],["TEM",54.1,9,"Buy"],["BSX",51.7,4,"Strong Buy"],
+      ["AVAV",50.8,5,"Strong Buy"],["NVDA",49.9,9,"Strong Buy"],["ISRG",46.0,8,"Strong Buy"]
+    ];
+    document.querySelector("#rawBars").innerHTML = raw.map((r,i)=>`
+      <div class="barrow" style="grid-template-columns:25px 58px 1fr 58px">
+        <div class="rank">${i+1}</div><div><b>${r[0]}</b><div class="tiny">Score ${r[2]}</div></div>
+        <div class="track"><div class="fill" style="width:${Math.min(r[1],115)/1.15}%"></div></div>
+        <div class="up">+${r[1]}%</div>
+      </div>`).join("");
+
+    const themeDetails = [
+      {n:1,title:"Power Generation & Grid Modernisation",tag:"Highest conviction · 9.4/10",
+       market:"Data centres, electrification and advanced manufacturing are colliding with multi-year permitting and connection delays. The IEA says more than 2,500 GW is stuck in queues and grid-component prices have nearly doubled in five years.",
+       priced:"Scarcity value is recognized, especially for nuclear and merchant generation. The variant is duration: long contracts, capacity additions and transmission work may sustain earnings longer than a normal utility cycle.",
+       catalysts:"Large-load contracts; capacity-market strength; generation uprates; interconnection reform; transmission awards.",
+       kill:"AI capex slowdown, power-price collapse, adverse market redesign, project delays or political limits on large-load economics.",
+       a:["VST","+38.9%","Better cash-flow torque and Smart Score 9"],b:["CEG","+33.3%","Highest-quality clean firm power franchise"]},
+      {n:2,title:"AI Compute Infrastructure",tag:"Very high conviction · 9.2/10",
+       market:"The IEA expects AI-focused data-centre power use to triple by 2030. NVIDIA’s Q1 FY2027 data-centre revenue rose 92% YoY; Broadcom’s Q2 FY2026 AI semiconductor revenue rose 143%. Demand remains evidence-backed, not only narrative.",
+       priced:"Exceptional growth and platform dominance are heavily recognized. The remaining wedge is whether inference, agents and sovereign/enterprise AI extend the capex cycle faster than custom silicon and efficiency reduce unit economics.",
+       catalysts:"Rubin / next-platform ramps; inference utilization; custom ASIC deployments; networking attach; enterprise adoption.",
+       kill:"Capex ROI skepticism, accelerated custom-silicon substitution, export restrictions, supply excess or falling gross margins.",
+       a:["NVDA","+49.9%","Best full-stack earnings revision path"],b:["AVGO","+33.5%","Best custom silicon + networking diversification"]},
+      {n:3,title:"Electrical Equipment & Transformers",tag:"Very high conviction · 9.0/10",
+       market:"Grids take 5–15 years to plan and build versus 1–3 years for data centres. That mismatch supports backlog, pricing and capacity investment across transformers, switchgear, busway and electrical protection.",
+       priced:"Eaton’s quality is well appreciated; the better target gap is in nVent. The key debate is whether expanded capacity destroys scarcity pricing or instead unlocks years of deferred volume.",
+       catalysts:"Backlog conversion; new plant qualification; utility rate-base approvals; data-centre electrical awards.",
+       kill:"Order cancellations, price-cost reversal, capacity-ramp inefficiency or component lead-time normalization faster than demand growth.",
+       a:["NVT","+29.9%","Better upside plus cooling adjacency"],b:["ETN","+14.1%","Higher-quality, lower-upside compounder"]},
+      {n:4,title:"Cooling & HVAC Infrastructure",tag:"Very high conviction · 8.8/10",
+       market:"Cooling and other infrastructure contribute roughly one-fifth of the net increase in data-centre electricity demand in the IEA base case. Rising rack density forces liquid cooling and higher-value power/thermal architectures.",
+       priced:"The structural growth is recognized and multiples are demanding. The variant is faster content-per-MW growth, but this must overcome strong recent share-price performance.",
+       catalysts:"Liquid-cooling orders; hyperscaler qualifications; manufacturing ramps; service attach and margin expansion.",
+       kill:"Lower rack power density, direct-to-chip commoditization, customer insourcing, capacity overshoot or multiple compression.",
+       a:["VRT","+34.8%","Broadest data-centre power + thermal stack"],b:["MOD","+42.1%","Higher torque, higher execution and valuation risk"]},
+      {n:5,title:"Semiconductor Equipment & Memory",tag:"High conviction · 8.5/10",
+       market:"SEMI forecasts sustained equipment growth driven by leading-edge logic, HBM and advanced packaging. AI raises both wafer complexity and memory content, supporting lithography, deposition/etch, test and packaging.",
+       priced:"Large rallies embed a strong cycle. The debate is whether AI creates a structurally higher memory/equipment floor or merely a powerful cyclical peak.",
+       catalysts:"HBM qualifications; DRAM pricing; EUV/High-NA shipments; advanced packaging capacity; capex guidance.",
+       kill:"Memory oversupply, foundry capex cuts, export controls, yield delays or customers double-ordering scarce tools.",
+       a:["MU","+70.4%","Highest quality-adjusted target gap"],b:["ASML","+35.3%","Scarce lithography toll road; Smart Score 10"]},
+      {n:6,title:"Defence & Aerospace",tag:"High conviction · 8.3/10",
+       market:"NATO allies committed to 5% of GDP by 2035, including at least 3.5% for core defence. The most attractive profit pools are replenishment, autonomous systems, hypersonics, space and production capacity—not every prime.",
+       priced:"Large-prime backlogs are understood and target gaps are thin. Smaller autonomous and high-speed systems suppliers offer more upside but far more programme and funding risk.",
+       catalysts:"Multi-year awards; allied procurement; production-rate increases; backlog-to-cash conversion.",
+       kill:"Budget reallocation, programme cancellation, fixed-price overruns, integration failures or delayed production.",
+       a:["KTOS","+102.9%","Highest upside; capex and FCF gated"],b:["AVAV","+50.8%","Direct autonomous / loitering-munitions exposure"]},
+      {n:7,title:"Copper, Uranium & Critical Minerals",tag:"High conviction · 8.1/10",
+       market:"The IEA projects a roughly 25% copper supply gap in 2035 under its base project pipeline, while strategic minerals remain highly concentrated. Uranium benefits from nuclear restarts and energy-security priorities.",
+       priced:"Copper scarcity is broadly known; uranium and rare-earth equities carry commodity and policy optionality. The best expression balances resource quality, contracting power and funding risk.",
+       catalysts:"Long-term contracts; project approvals; price floors/offtake; production ramps; Western supply-chain incentives.",
+       kill:"Commodity-price reversal, capex inflation, permitting delays, dilution, geopolitical intervention or substitution.",
+       a:["CCJ","+42.9%","Best quality uranium / nuclear-services expression"],b:["MP","+88.2%","Strategic mine-to-magnet upside, execution-gated"]},
+      {n:8,title:"Healthcare AI & Medical Technology",tag:"Selective high conviction · 7.8/10",
+       market:"The FDA’s continuously updated list shows AI is moving through regulated-device pathways, with radiology, cardiovascular and workflow applications prominent. Durable equity value still depends on reimbursement, adoption and workflow integration.",
+       priced:"AI narratives are abundant; proprietary clinical data, installed bases and recurring consumables are scarcer. Favour platforms where AI strengthens an existing economic moat.",
+       catalysts:"Reimbursement coverage; procedure growth; regulatory clearances; recurring revenue mix; data-partnership expansion.",
+       kill:"Weak clinical utility, reimbursement denials, hospital-budget pressure, privacy constraints or dilution before profitability.",
+       a:["TEM","+54.1%","Highest data/AI upside; proof of margins needed"],b:["ISRG","+46.0%","Best installed-base and recurring-revenue quality"]},
+      {n:9,title:"Water Infrastructure",tag:"Durable but slower · 7.6/10",
+       market:"The EPA estimates $625 billion of US drinking-water capital need over 20 years; the World Bank estimates $1.04 trillion is needed for universal water and sanitation access by 2030. The need is durable but project conversion can be slow.",
+       priced:"Water quality and scarcity are familiar defensive themes. Upside comes from pricing, share gains, smart metering and treatment efficiency—not only public funding headlines.",
+       catalysts:"Municipal awards; lead-line replacement; stormwater regulation; smart-meter adoption; M&A and margin improvement.",
+       kill:"Rate pressure on municipal budgets, grant normalization, project delays, construction weakness or raw-material inflation.",
+       a:["WMS","+30.0%","Best growth and share-gain setup"],b:["XYL","+23.2%","Best diversified pure-play water platform"]},
+      {n:10,title:"Industrial Automation & Robotics",tag:"Cycle-gated · 7.3/10",
+       market:"IFR reported 431,240 industrial robot installations in 2024. Labour scarcity and reshoring are structural, but factory automation remains sensitive to automotive, electronics and general industrial capex cycles.",
+       priced:"Long-term adoption is recognized, while near-term orders remain uneven. Prefer differentiated test/vision/warehouse systems with observable deployment pipelines.",
+       catalysts:"Order inflection; warehouse deployment milestones; semiconductor-test wins; China/auto recovery.",
+       kill:"Manufacturing recession, customer concentration, project overruns, weak software monetization or lower-cost competition.",
+       a:["TER","+29.4%","Diversified test plus robotics optionality"],b:["SYM","+66.6%","Highest automation upside; execution gated"]}
+    ];
+    document.querySelector("#themeCards").innerHTML = themeDetails.map(t=>`
+      <article class="card theme-card">
+        <div class="theme-head"><h3>${t.title}</h3><span class="theme-rank">#${t.n} · ${t.tag}</span></div>
+        <h4>Market structure</h4><p>${t.market}</p>
+        <h4>What is priced / variant wedge</h4><p>${t.priced}</p>
+        <h4>Prove / kill</h4><p><b>Prove:</b> ${t.catalysts}<br><b>Kill:</b> ${t.kill}</p>
+        <div class="stock-pair">
+          <div class="pick"><div class="head"><b>${t.a[0]}</b><span class="up">${t.a[1]}</span></div><p>${t.a[2]}</p></div>
+          <div class="pick"><div class="head"><b>${t.b[0]}</b><span class="up">${t.b[1]}</span></div><p>${t.b[2]}</p></div>
+        </div>
+      </article>`).join("");
+  </script>
+</body>
+</html>
