@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "awaiting-api-key",
+  "source": {
+    "name": "Financial Modeling Prep",
+    "quoteDocs": "https://site.financialmodelingprep.com/developer/docs/stable/quote",
+    "targetDocs": "https://site.financialmodelingprep.com/developer/docs/stable/price-target-consensus",
+    "ratingsDocs": "https://site.financialmodelingprep.com/developer/docs/stable/grades-summary"
+  },
+  "lastUpdated": null,
+  "stocks": {}
+}
