@@ -112,7 +112,7 @@
       <h1>Structural Scarcity v2</h1>
       <div class="deck">A 2026–2035 strategy for identifying where AI, electrification and geopolitical resilience become measurable corporate earnings—combined with a current analyst-upside screen for execution over the next 12 months.</div>
       <div class="meta">
-        <span class="pill">As of 27 July 2026</span>
+        <span class="pill" id="marketDataStatus">Market snapshot: 27 July 2026</span>
         <span class="pill">77 liquid US-listed shares / ADRs screened</span>
         <span class="pill">Global themes; USD market data</span>
         <span class="pill">2030–2035 thesis + 12-month target screen</span>
@@ -134,7 +134,7 @@
       <div class="grid g4">
         <div class="card kpi"><div class="num">12</div><div class="label">distinct research lanes</div></div>
         <div class="card kpi"><div class="num">27</div><div class="label">stocks on primary + extension boards</div></div>
-        <div class="card kpi"><div class="num">+70%</div><div class="label">highest quality-adjusted target gap: Micron</div></div>
+        <div class="card kpi"><div class="num" id="highestTargetGap">+70%</div><div class="label" id="highestTargetLabel">highest quality-adjusted target gap: Micron</div></div>
         <div class="card kpi"><div class="num">5</div><div class="label">A-tier immediate research candidates</div></div>
       </div>
 
@@ -224,29 +224,29 @@
         <table>
           <thead><tr><th>Status</th><th>Lane / stock</th><th>Analyst view</th><th>Price → target</th><th>Upside</th><th>Strategic value</th><th>Why it is not yet A-tier</th></tr></thead>
           <tbody>
-            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Networking components</div><a class="ticker" href="https://www.tipranks.com/stocks/aph">APH</a><div>Amphenol · Score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$152.67 → $192.70</td><td class="up">+26.2%</td><td>Diversified high-speed interconnect and connector content with strong quality characteristics.</td><td>41.7× trailing P/E and broad end-market exposure dilute the pure AI attribution.</td></tr>
-            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Optical manufacturing</div><a class="ticker" href="https://www.tipranks.com/stocks/fn">FN</a><div>Fabrinet · Score 8</div></td><td><span class="badge b-buy">Buy</span><div class="tiny">Top analysts: Buy</div></td><td>$476.04 → $763.67</td><td class="up">+60.4%</td><td>Manufacturing leverage to optical modules and high-speed connectivity demand.</td><td>Customer concentration, manufacturing margins and a large target gap require order-level proof.</td></tr>
-            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">AI systems manufacturing</div><a class="ticker" href="https://www.tipranks.com/stocks/cls">CLS</a><div>Celestica · Score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$305.28 → $456.50</td><td class="up">+49.5%</td><td>Scaled manufacturing exposure to networking and AI data-centre systems with strong composite signals.</td><td>Concentration, lower structural margins than component owners and earnings-date volatility.</td></tr>
-            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Flash / storage</div><a class="ticker" href="https://www.tipranks.com/stocks/sndk">SNDK</a><div>SanDisk · Score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$1,436.56 → $2,052.50</td><td class="up">+42.9%</td><td>Cleaner flash and storage exposure strengthens the standalone memory research lane.</td><td>Extreme prior price appreciation, 47× trailing P/E and cyclical NAND supply response.</td></tr>
-            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Electrical systems</div><a class="ticker" href="https://www.tipranks.com/stocks/powl">POWL</a><div>Powell Industries · Score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Buy</div></td><td>$232.21 → $352.64</td><td class="up">+51.9%</td><td>Direct switchgear and electrical-distribution exposure to utility, industrial and data-centre buildout.</td><td>Smaller scale, 45× trailing P/E, strong prior rally and top-analyst rating divergence.</td></tr>
-            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Mechanical construction</div><a class="ticker" href="https://www.tipranks.com/stocks/fix">FIX</a><div>Comfort Systems · Score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$1,733.60 → $2,164.86</td><td class="up">+24.9%</td><td>Installs mission-critical HVAC, electrical and mechanical systems that turn data-centre plans into operating capacity.</td><td>High expectations after a strong rally, labour availability and project execution risk.</td></tr>
-            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Electrical / mechanical construction</div><a class="ticker" href="https://www.tipranks.com/stocks/eme">EME</a><div>EMCOR · Score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$744.85 → $973.20</td><td class="up">+30.7%</td><td>More attractively valued installation and services exposure with broad commercial and industrial demand.</td><td>Less-pure AI attribution and exposure to project timing and commercial construction conditions.</td></tr>
+            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Networking components</div><a class="ticker" href="https://www.tipranks.com/stocks/aph">APH</a><div>Amphenol · Snapshot score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$152.67 → $192.70</td><td class="up">+26.2%</td><td>Diversified high-speed interconnect and connector content with strong quality characteristics.</td><td>41.7× trailing P/E and broad end-market exposure dilute the pure AI attribution.</td></tr>
+            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Optical manufacturing</div><a class="ticker" href="https://www.tipranks.com/stocks/fn">FN</a><div>Fabrinet · Snapshot score 8</div></td><td><span class="badge b-buy">Buy</span><div class="tiny">Top analysts: Buy</div></td><td>$476.04 → $763.67</td><td class="up">+60.4%</td><td>Manufacturing leverage to optical modules and high-speed connectivity demand.</td><td>Customer concentration, manufacturing margins and a large target gap require order-level proof.</td></tr>
+            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">AI systems manufacturing</div><a class="ticker" href="https://www.tipranks.com/stocks/cls">CLS</a><div>Celestica · Snapshot score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$305.28 → $456.50</td><td class="up">+49.5%</td><td>Scaled manufacturing exposure to networking and AI data-centre systems with strong composite signals.</td><td>Concentration, lower structural margins than component owners and earnings-date volatility.</td></tr>
+            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Flash / storage</div><a class="ticker" href="https://www.tipranks.com/stocks/sndk">SNDK</a><div>SanDisk · Snapshot score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$1,436.56 → $2,052.50</td><td class="up">+42.9%</td><td>Cleaner flash and storage exposure strengthens the standalone memory research lane.</td><td>Extreme prior price appreciation, 47× trailing P/E and cyclical NAND supply response.</td></tr>
+            <tr><td><span class="badge b-watch">B</span></td><td><div class="tiny">Electrical systems</div><a class="ticker" href="https://www.tipranks.com/stocks/powl">POWL</a><div>Powell Industries · Snapshot score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Buy</div></td><td>$232.21 → $352.64</td><td class="up">+51.9%</td><td>Direct switchgear and electrical-distribution exposure to utility, industrial and data-centre buildout.</td><td>Smaller scale, 45× trailing P/E, strong prior rally and top-analyst rating divergence.</td></tr>
+            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Mechanical construction</div><a class="ticker" href="https://www.tipranks.com/stocks/fix">FIX</a><div>Comfort Systems · Snapshot score 10</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$1,733.60 → $2,164.86</td><td class="up">+24.9%</td><td>Installs mission-critical HVAC, electrical and mechanical systems that turn data-centre plans into operating capacity.</td><td>High expectations after a strong rally, labour availability and project execution risk.</td></tr>
+            <tr><td><span class="badge b-buy">B+</span></td><td><div class="tiny">Electrical / mechanical construction</div><a class="ticker" href="https://www.tipranks.com/stocks/eme">EME</a><div>EMCOR · Snapshot score 7</div></td><td><span class="badge b-strong">Strong Buy</span><div class="tiny">Top analysts: Strong Buy</div></td><td>$744.85 → $973.20</td><td class="up">+30.7%</td><td>More attractively valued installation and services exposure with broad commercial and industrial demand.</td><td>Less-pure AI attribution and exposure to project timing and commercial construction conditions.</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="tiny">TipRanks snapshot retrieved 27 July 2026. These are extension candidates, not automatic promotions to the primary board.</p>
+      <p class="tiny" id="extensionDataNote">Fallback snapshot retrieved from TipRanks on 27 July 2026. When the automated feed is active, prices, consensus targets, analyst ratings and evidence scores refresh after each US trading day. These are extension candidates, not automatic promotions to the primary board.</p>
     </section>
 
     <section id="quality">
       <h2>Best-rated stocks with the most credible upside</h2>
-      <p class="sub">Twenty preferred names—two per theme. “Smart Score” is TipRanks’ 1–10 composite; consensus and targets are from all covering analysts. Prices are the latest close in the retrieved 27 July 2026 snapshot.</p>
+      <p class="sub">Twenty preferred names—two per theme. The transparent 1–10 evidence score blends analyst-rating breadth, target upside and coverage depth. Prices, consensus targets and rating counts refresh from Financial Modeling Prep after each US trading day; the dated fallback remains visible if the feed fails.</p>
       <div class="table-scroll">
         <table id="qualityTable">
           <thead><tr><th>Tier</th><th>Theme / stock</th><th>Analyst view</th><th>Price → target</th><th>Upside</th><th>Why the target can work</th><th>First rejection / risk</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
-      <p class="tiny">Source for every price, target, consensus and Smart Score: linked TipRanks stock page. Targets can change without notice. Broad-consensus “Strong Buy” is displayed as Strong Buy.</p>
+      <p class="tiny" id="qualityDataNote">Live-feed source: Financial Modeling Prep quote, price-target-consensus and grades-consensus APIs. Fallback source: TipRanks snapshot retrieved 27 July 2026. Analyst targets can change without notice and are not expected returns.</p>
     </section>
 
     <section id="raw">
@@ -264,7 +264,7 @@
             <li><b>KTOS / AVAV:</b> attractive autonomous-systems demand; targets require production ramps and margin conversion.</li>
             <li><b>MP:</b> strategic policy support and vertical integration; economics remain sensitive to commissioning, rare-earth pricing and capital intensity.</li>
             <li><b>TMDX / TEM:</b> powerful category growth; reimbursement, adoption and operating leverage still need to be proven.</li>
-            <li><b>MU:</b> the rare high-upside name with a profitable earnings base and Smart Score 9, but memory remains cyclical.</li>
+            <li><b>MU:</b> the rare high-upside name with a profitable earnings base and strong snapshot signals, but memory remains cyclical.</li>
           </ul>
           <div class="callout warn" style="margin-bottom:0"><strong>Screen rule:</strong> do not advance an extreme-upside name unless the thesis can be tied to an observable order, production, reimbursement, backlog, utilization or free-cash-flow milestone.</div>
         </div>
@@ -305,7 +305,7 @@
             <tr><td class="ticker">ROK</td><td>Pure industrial automation leader.</td><td>3.9% target gap and 48× trailing P/E; recovery appears largely priced.</td><td>Orders inflect before the multiple expands further.</td></tr>
             <tr><td class="ticker">SCCO</td><td>High-quality, low-cost copper exposure.</td><td>Sell consensus and −11.9% target gap at the snapshot price.</td><td>Copper price or volume outlook drives target upgrades.</td></tr>
             <tr><td class="ticker">LMT / GD</td><td>Defence budget duration and backlog.</td><td>Neutral / low-upside setups of 4.5% and 1.3% respectively.</td><td>Estimate revisions from faster awards and production conversion.</td></tr>
-            <tr><td class="ticker">LAC</td><td>127% raw target gap.</td><td>Neutral consensus, Smart Score 2 and project-financing / execution dependence.</td><td>Financing, permits and construction milestones materially de-risked.</td></tr>
+            <tr><td class="ticker">LAC</td><td>127% raw target gap.</td><td>Neutral consensus, weak snapshot score and project-financing / execution dependence.</td><td>Financing, permits and construction milestones materially de-risked.</td></tr>
           </tbody>
         </table>
       </div>
@@ -381,7 +381,7 @@
           <ol>
             <li>Translated the user’s macro playbook and Future Economy Research Roadmap into 12 thematic pathways: memory/storage was separated from semiconductor equipment, networking/interconnect became standalone, and engineering/construction was added as a cross-theme execution lens.</li>
             <li>Screened a 77-name liquid US-listed / ADR universe across structural bottlenecks, adoption beneficiaries and optionality.</li>
-            <li>Retrieved current price, market cap, Smart Score, broad consensus, best-performing-analyst consensus and average 12-month target.</li>
+            <li>Retrieved a dated research snapshot of prices, analyst consensus and average 12-month targets; the published site now refreshes its market-data tables from Financial Modeling Prep after each US trading day.</li>
             <li>Excluded or penalized thin target gaps, neutral / negative consensus, weak exposure attribution and extreme execution dependence.</li>
             <li>Ranked the survivors by theme durability, earnings visibility, estimate-revision potential, valuation risk and falsifiability.</li>
           </ol>
@@ -390,7 +390,7 @@
           <h3>Important limitations</h3>
           <ul>
             <li>Consensus targets are point-in-time market data, not independently modelled fair values.</li>
-            <li>Coverage breadth differs by stock; the tool did not expose analyst counts in the portfolio snapshot.</li>
+            <li>Coverage breadth differs by stock. The automated evidence score makes coverage depth explicit but is a screening aid, not a valuation model.</li>
             <li>Trailing P/E is not comparable across cyclical, pre-profit and recently restructured companies.</li>
             <li>The screen is global-thematic but US-listing-biased; several European and Asian leaders are underrepresented.</li>
             <li>No portfolio constraints, tax position, base currency or risk budget were provided.</li>
@@ -415,14 +415,15 @@
         <li><a href="https://www.worldbank.org/ext/en/topic/water">World Bank, Water</a> — global water and sanitation investment need.</li>
         <li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx">NVIDIA Q1 FY2027 results</a> — data-centre growth and platform evidence.</li>
         <li><a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial">Broadcom Q2 FY2026 results</a> — AI semiconductor growth and guidance.</li>
-        <li><a href="https://www.tipranks.com">TipRanks</a> — prices, Smart Scores, analyst consensus and average 12-month targets, retrieved 27 July 2026.</li>
+        <li><a href="https://site.financialmodelingprep.com/developer/docs/stable/quote">Financial Modeling Prep quote API</a>, <a href="https://site.financialmodelingprep.com/developer/docs/stable/price-target-consensus">price-target consensus API</a> and <a href="https://site.financialmodelingprep.com/developer/docs/stable/grades-summary">grades consensus API</a> — automated prices, consensus targets and rating breadth after each US trading day.</li>
+        <li><a href="https://www.tipranks.com">TipRanks</a> — fallback research snapshot retrieved 27 July 2026; its proprietary Smart Score is not reproduced by the automated feed.</li>
       </ol>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <b>Structural Scarcity v2 · research-priority report—not personal investment advice.</b> “Advance” means advance to deeper underwriting, not buy. Market prices and analyst targets may have changed since the 27 July 2026 freeze time. All percentages are analyst-implied price appreciation and exclude dividends, taxes, FX and transaction costs.
+      <b>Structural Scarcity v2 · research-priority report—not personal investment advice.</b> “Advance” means advance to deeper underwriting, not buy. Check the market-data timestamp before use; a dated fallback remains visible if an automated refresh fails. All percentages are analyst-implied price appreciation and exclude dividends, taxes, FX and transaction costs.
     </div>
   </footer>
 
@@ -485,16 +486,20 @@
       {tier:"B",theme:"Water",ticker:"XYL",name:"Xylem",score:6,cons:"Buy",best:"Buy",price:119.75,target:147.50,up:23.2,
        why:"Broad pumps, treatment, metering and analytics portfolio provides recurring exposure to municipal and industrial water efficiency.",risk:"Flat orders/backlog pressure, funding normalization, high rates and execution on the earnings ramp.",url:"https://www.tipranks.com/stocks/xyl"}
     ];
-    const badge = c => c==="Strong Buy" ? "b-strong" : "b-buy";
-    document.querySelector("#qualityTable tbody").innerHTML = picks.map(p=>`
+    let scoreLabel = "Snapshot score";
+    const badge = c => c==="Strong Buy" ? "b-strong" : c==="Buy" ? "b-buy" : "b-watch";
+    const renderQuality = () => {
+      document.querySelector("#qualityTable tbody").innerHTML = picks.map(p=>`
       <tr>
         <td><span class="badge ${p.tier==="A"?"b-strong":"b-watch"}">${p.tier}</span></td>
-        <td><div class="tiny">${p.theme}</div><a class="ticker" href="${p.url}">${p.ticker}</a><div>${p.name}</div><div class="tiny">Smart Score ${p.score}/10</div></td>
-        <td><span class="badge ${badge(p.cons)}">${p.cons}</span><div class="tiny">Top analysts: ${p.best}</div></td>
+        <td><div class="tiny">${p.theme}</div><a class="ticker" href="${p.url}">${p.ticker}</a><div>${p.name}</div><div class="tiny">${scoreLabel} ${p.score}/10</div></td>
+        <td><span class="badge ${badge(p.cons)}">${p.cons}</span><div class="tiny">${p.best}</div></td>
         <td class="no-wrap">$${p.price.toFixed(2)} → $${p.target.toFixed(2)}</td>
         <td class="up">+${p.up.toFixed(1)}%</td>
         <td>${p.why}</td><td>${p.risk}</td>
       </tr>`).join("");
+    };
+    renderQuality();
 
     const raw = [
       ["UEC",110.9,4,"Strong Buy"],["KTOS",102.9,5,"Strong Buy"],["MP",88.2,6,"Strong Buy"],
@@ -502,12 +507,15 @@
       ["NXE",62.9,2,"Strong Buy"],["TEM",54.1,9,"Buy"],["BSX",51.7,4,"Strong Buy"],
       ["AVAV",50.8,5,"Strong Buy"],["NVDA",49.9,9,"Strong Buy"],["ISRG",46.0,8,"Strong Buy"]
     ];
-    document.querySelector("#rawBars").innerHTML = raw.map((r,i)=>`
+    const renderRaw = () => {
+      document.querySelector("#rawBars").innerHTML = [...raw].sort((a,b)=>b[1]-a[1]).map((r,i)=>`
       <div class="barrow" style="grid-template-columns:25px 58px 1fr 58px">
-        <div class="rank">${i+1}</div><div><b>${r[0]}</b><div class="tiny">Score ${r[2]}</div></div>
+        <div class="rank">${i+1}</div><div><b>${r[0]}</b><div class="tiny">${scoreLabel} ${r[2]}</div></div>
         <div class="track"><div class="fill" style="width:${Math.min(r[1],115)/1.15}%"></div></div>
         <div class="up">+${r[1]}%</div>
       </div>`).join("");
+    };
+    renderRaw();
 
     const themeDetails = [
       {n:1,title:"Power Generation & Grid Modernisation",tag:"Highest conviction · 9.4/10",
@@ -515,7 +523,7 @@
        priced:"Scarcity value is recognized, especially for nuclear and merchant generation. The variant is duration: long contracts, capacity additions and transmission work may sustain earnings longer than a normal utility cycle.",
        catalysts:"Large-load contracts; capacity-market strength; generation uprates; interconnection reform; transmission awards.",
        kill:"AI capex slowdown, power-price collapse, adverse market redesign, project delays or political limits on large-load economics.",
-       a:["VST","+38.9%","Better cash-flow torque and Smart Score 9"],b:["CEG","+33.3%","Highest-quality clean firm power franchise"]},
+       a:["VST","+38.9%","Better cash-flow torque and strong screening evidence"],b:["CEG","+33.3%","Highest-quality clean firm power franchise"]},
       {n:2,title:"AI Compute Infrastructure",tag:"Very high conviction · 9.2/10",
        market:"The IEA expects AI-focused data-centre power use to triple by 2030. NVIDIA’s Q1 FY2027 data-centre revenue rose 92% YoY; Broadcom’s Q2 FY2026 AI semiconductor revenue rose 143%. Demand remains evidence-backed, not only narrative.",
        priced:"Exceptional growth and platform dominance are heavily recognized. The remaining wedge is whether inference, agents and sovereign/enterprise AI extend the capex cycle faster than custom silicon and efficiency reduce unit economics.",
@@ -539,7 +547,7 @@
        priced:"Large rallies embed a strong cycle. The debate is whether AI creates a structurally higher memory/equipment floor or merely a powerful cyclical peak.",
        catalysts:"HBM qualifications; DRAM pricing; EUV/High-NA shipments; advanced packaging capacity; capex guidance.",
        kill:"Memory oversupply, foundry capex cuts, export controls, yield delays or customers double-ordering scarce tools.",
-       a:["MU","+70.4%","Highest quality-adjusted target gap"],b:["ASML","+35.3%","Scarce lithography toll road; Smart Score 10"]},
+       a:["MU","+70.4%","Highest quality-adjusted target gap"],b:["ASML","+35.3%","Scarce lithography toll road; strong screening evidence"]},
       {n:6,title:"Defence & Aerospace",tag:"High conviction · 8.3/10",
        market:"NATO allies committed to 5% of GDP by 2035, including at least 3.5% for core defence. The most attractive profit pools are replenishment, autonomous systems, hypersonics, space and production capacity—not every prime.",
        priced:"Large-prime backlogs are understood and target gaps are thin. Smaller autonomous and high-speed systems suppliers offer more upside but far more programme and funding risk.",
@@ -571,7 +579,8 @@
        kill:"Manufacturing recession, customer concentration, project overruns, weak software monetization or lower-cost competition.",
        a:["TER","+29.4%","Diversified test plus robotics optionality"],b:["SYM","+66.6%","Highest automation upside; execution gated"]}
     ];
-    document.querySelector("#themeCards").innerHTML = themeDetails.map(t=>`
+    const renderThemeCards = () => {
+      document.querySelector("#themeCards").innerHTML = themeDetails.map(t=>`
       <article class="card theme-card">
         <div class="theme-head"><h3>${t.title}</h3><span class="theme-rank">#${t.n} · ${t.tag}</span></div>
         <h4>Market structure</h4><p>${t.market}</p>
@@ -582,6 +591,77 @@
           <div class="pick"><div class="head"><b>${t.b[0]}</b><span class="up">${t.b[1]}</span></div><p>${t.b[2]}</p></div>
         </div>
       </article>`).join("");
+    };
+    renderThemeCards();
+
+    const formatDate = iso => new Intl.DateTimeFormat("en-GB", {
+      day:"numeric", month:"long", year:"numeric", hour:"2-digit", minute:"2-digit",
+      timeZone:"America/New_York", timeZoneName:"short"
+    }).format(new Date(iso));
+
+    async function applyAutomatedMarketData() {
+      try {
+        const response = await fetch(`data/market.json?v=${Date.now()}`, {cache:"no-store"});
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const market = await response.json();
+        if (!market.lastUpdated || !market.stocks || !Object.keys(market.stocks).length) return;
+
+        scoreLabel = "Evidence score";
+        for (const pick of picks) {
+          const live = market.stocks[pick.ticker];
+          if (!live) continue;
+          pick.price = live.price;
+          pick.target = live.target;
+          pick.up = live.upside;
+          pick.cons = live.consensus;
+          pick.score = live.evidenceScore;
+          pick.best = `${live.coverage} analyst ratings`;
+        }
+        for (const row of raw) {
+          const live = market.stocks[row[0]];
+          if (!live) continue;
+          row[1] = live.upside;
+          row[2] = live.evidenceScore;
+          row[3] = live.consensus;
+        }
+        for (const theme of themeDetails) {
+          for (const candidate of [theme.a, theme.b]) {
+            const live = market.stocks[candidate[0]];
+            if (live) candidate[1] = `${live.upside >= 0 ? "+" : ""}${live.upside.toFixed(1)}%`;
+          }
+        }
+
+        document.querySelectorAll("#newlanes tbody tr").forEach(row => {
+          const ticker = row.querySelector("a.ticker")?.textContent.trim();
+          const live = market.stocks[ticker];
+          if (!live) return;
+          const cells = row.cells;
+          const nameLine = cells[1].querySelectorAll("div")[1];
+          if (nameLine) nameLine.textContent = `${live.name || ticker} · Evidence score ${live.evidenceScore}`;
+          cells[2].innerHTML = `<span class="badge ${badge(live.consensus)}">${live.consensus}</span><div class="tiny">${live.coverage} analyst ratings</div>`;
+          cells[3].textContent = `$${live.price.toFixed(2)} → $${live.target.toFixed(2)}`;
+          cells[4].textContent = `${live.upside >= 0 ? "+" : ""}${live.upside.toFixed(1)}%`;
+          cells[4].className = live.upside >= 0 ? "up" : "down";
+        });
+
+        const ranked = picks.filter(p => Number.isFinite(p.up)).sort((a,b)=>b.up-a.up);
+        if (ranked[0]) {
+          document.querySelector("#highestTargetGap").textContent = `${ranked[0].up >= 0 ? "+" : ""}${ranked[0].up.toFixed(0)}%`;
+          document.querySelector("#highestTargetLabel").textContent = `largest current target gap: ${ranked[0].name}`;
+        }
+        const updated = formatDate(market.lastUpdated);
+        const partial = market.status === "partial" ? " · partial refresh" : "";
+        document.querySelector("#marketDataStatus").textContent = `Market data: ${updated}${partial}`;
+        document.querySelector("#extensionDataNote").textContent = `Financial Modeling Prep refresh: ${updated}${partial}. Prices, consensus targets and analyst-rating counts update after each US trading day.`;
+        document.querySelector("#qualityDataNote").innerHTML = `Source: <a href="${market.source.quoteDocs}">FMP quotes</a>, <a href="${market.source.targetDocs}">consensus targets</a> and <a href="${market.source.ratingsDocs}">analyst ratings</a>. Refreshed ${updated}${partial}. Targets are not expected returns.`;
+        renderQuality();
+        renderRaw();
+        renderThemeCards();
+      } catch (error) {
+        console.warn("Automated market data unavailable; retaining the dated fallback snapshot.", error);
+      }
+    }
+    applyAutomatedMarketData();
   </script>
 </body>
 </html>
