@@ -98,12 +98,14 @@
     .stage .step:before{counter-increment:stage;content:counter(stage);display:inline-grid;place-items:center;width:25px;height:25px;border-radius:50%;background:var(--navy);color:#fff;font-weight:850;font-size:11px;margin-bottom:8px}
     .stage .step b{display:block;font-size:12px}.stage .step span{font-size:10px;color:var(--muted)}
     .source-list{columns:2;column-gap:38px}.source-list li{break-inside:avoid;font-size:12px;margin:0 0 10px;color:#4d6071}
+    .live-board{min-height:620px;display:block;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
     .footer{background:var(--navy);color:#c8d8e1;padding:35px 5vw;font-size:12px}.footer-inner{max-width:1240px;margin:auto}
     .no-wrap{white-space:nowrap}
     @media(max-width:980px){.g4,.g3{grid-template-columns:1fr 1fr}.barrow{grid-template-columns:28px 170px 1fr 48px}.matrix{grid-template-columns:1fr 1fr}.stock-pair{grid-template-columns:1fr}.table-scroll{overflow:auto}.source-list{columns:1}.chain{grid-template-columns:repeat(2,1fr)}.chain .node:not(:last-child):after{display:none}.stage{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.g4,.g3,.g2,.horizon{grid-template-columns:1fr}.hero{padding-top:45px}.wrap{padding-left:18px;padding-right:18px}.barrow{grid-template-columns:26px 1fr 45px}.track{grid-column:2/4}.matrix,.chain,.stage{grid-template-columns:1fr}h2{font-size:25px}}
     @media print{.nav{display:none}.hero{padding:35px;background:#102c4a!important}.wrap{padding:18px}.card,table{box-shadow:none;break-inside:avoid}a{color:inherit}.theme-card{break-inside:avoid}body{background:#fff}}
   </style>
+  <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-market-overview.js"></script>
 </head>
 <body>
   <header class="hero">
@@ -112,7 +114,7 @@
       <h1>Structural Scarcity v2</h1>
       <div class="deck">A 2026–2035 strategy for identifying where AI, electrification and geopolitical resilience become measurable corporate earnings—combined with a current analyst-upside screen for execution over the next 12 months.</div>
       <div class="meta">
-        <span class="pill" id="marketDataStatus">Market snapshot: 27 July 2026</span>
+        <span class="pill">Live/delayed prices · analyst snapshot 27 July 2026</span>
         <span class="pill">77 liquid US-listed shares / ADRs screened</span>
         <span class="pill">Global themes; USD market data</span>
         <span class="pill">2030–2035 thesis + 12-month target screen</span>
@@ -123,7 +125,7 @@
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="#conclusion">Conclusion</a><a href="#hierarchy">Value chain</a><a href="#themes">Theme ranking</a>
+      <a href="#conclusion">Conclusion</a><a href="#live">Live prices</a><a href="#hierarchy">Value chain</a><a href="#themes">Theme ranking</a>
       <a href="#newlanes">New lanes</a><a href="#quality">Quality-adjusted picks</a><a href="#raw">Raw upside</a>
       <a href="#deepdives">Deep dives</a><a href="#overlap">Overlap</a><a href="#monitor">Monitoring</a><a href="#sources">Sources</a>
     </div>
@@ -168,6 +170,23 @@
       <div class="callout warn">
         <strong>Analyst target upside is not expected return.</strong> It is a time-stamped consensus gap that may widen after a price fall, may use optimistic out-year earnings, and often ignores dilution, cycle risk or multiple compression. The report therefore separates “raw upside” from “quality-adjusted upside.”
       </div>
+    </section>
+
+    <section id="live">
+      <h2>Live market board</h2>
+      <p class="sub">Current or exchange-delayed prices and daily moves are supplied directly by TradingView’s free branded widget. Select a stock to view its chart. This board updates independently of the dated analyst-research snapshot below.</p>
+      <tv-market-overview
+        class="live-board"
+        color-theme="light"
+        date-range="3M"
+        locale="en"
+        symbol-sectors='[
+          {"sectionName":"Primary board","symbols":["NASDAQ:NVDA","NASDAQ:AVGO","NYSE:VST","NASDAQ:CEG","NYSE:NVT","NYSE:ETN","NASDAQ:TER","NASDAQ:SYM","NASDAQ:MU","NASDAQ:ASML","NYSE:VRT","NYSE:MOD","NYSE:CCJ","NYSE:MP","NASDAQ:KTOS","NASDAQ:AVAV","NASDAQ:TEM","NASDAQ:ISRG","NYSE:WMS","NYSE:XYL"]},
+          {"sectionName":"Extension board","symbols":["NYSE:APH","NYSE:FN","NYSE:CLS","NASDAQ:SNDK","NASDAQ:POWL","NYSE:FIX","NYSE:EME"]},
+          {"sectionName":"Additional watchlist","symbols":["AMEX:UEC","NASDAQ:TMDX","NYSE:NXE","NYSE:BSX"]}
+        ]'>
+      </tv-market-overview>
+      <p class="tiny">Free widget by TradingView. Some exchange data may be delayed. TradingView branding and attribution are intentionally retained.</p>
     </section>
 
     <section id="hierarchy">
@@ -234,19 +253,19 @@
           </tbody>
         </table>
       </div>
-      <p class="tiny" id="extensionDataNote">Fallback snapshot retrieved from TipRanks on 27 July 2026. When the automated feed is active, prices, consensus targets, analyst ratings and evidence scores refresh after each US trading day. These are extension candidates, not automatic promotions to the primary board.</p>
+      <p class="tiny">Analyst consensus, targets and snapshot scores were retrieved from TipRanks on 27 July 2026 and do not update automatically. Use the free live market board above for current or delayed prices. These are extension candidates, not automatic promotions to the primary board.</p>
     </section>
 
     <section id="quality">
       <h2>Best-rated stocks with the most credible upside</h2>
-      <p class="sub">Twenty preferred names—two per theme. The transparent 1–10 evidence score blends analyst-rating breadth, target upside and coverage depth. Prices, consensus targets and rating counts refresh from Financial Modeling Prep after each US trading day; the dated fallback remains visible if the feed fails.</p>
+      <p class="sub">Twenty preferred names—two per theme. Consensus ratings, targets and scores are a dated TipRanks research snapshot from 27 July 2026. Current or delayed prices are available in the free live market board above; target gaps in this table are not recalculated automatically.</p>
       <div class="table-scroll">
         <table id="qualityTable">
           <thead><tr><th>Tier</th><th>Theme / stock</th><th>Analyst view</th><th>Price → target</th><th>Upside</th><th>Why the target can work</th><th>First rejection / risk</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
-      <p class="tiny" id="qualityDataNote">Live-feed source: Financial Modeling Prep quote, price-target-consensus and grades-consensus APIs. Fallback source: TipRanks snapshot retrieved 27 July 2026. Analyst targets can change without notice and are not expected returns.</p>
+      <p class="tiny">Snapshot source: TipRanks, retrieved 27 July 2026. Analyst targets can change without notice and are not expected returns. No paid data feed or unofficial scraper is used.</p>
     </section>
 
     <section id="raw">
@@ -381,7 +400,7 @@
           <ol>
             <li>Translated the user’s macro playbook and Future Economy Research Roadmap into 12 thematic pathways: memory/storage was separated from semiconductor equipment, networking/interconnect became standalone, and engineering/construction was added as a cross-theme execution lens.</li>
             <li>Screened a 77-name liquid US-listed / ADR universe across structural bottlenecks, adoption beneficiaries and optionality.</li>
-            <li>Retrieved a dated research snapshot of prices, analyst consensus and average 12-month targets; the published site now refreshes its market-data tables from Financial Modeling Prep after each US trading day.</li>
+            <li>Retrieved a dated research snapshot of prices, analyst consensus and average 12-month targets. A separate TradingView widget supplies current or exchange-delayed market prices without altering the historical screen.</li>
             <li>Excluded or penalized thin target gaps, neutral / negative consensus, weak exposure attribution and extreme execution dependence.</li>
             <li>Ranked the survivors by theme durability, earnings visibility, estimate-revision potential, valuation risk and falsifiability.</li>
           </ol>
@@ -390,7 +409,7 @@
           <h3>Important limitations</h3>
           <ul>
             <li>Consensus targets are point-in-time market data, not independently modelled fair values.</li>
-            <li>Coverage breadth differs by stock. The automated evidence score makes coverage depth explicit but is a screening aid, not a valuation model.</li>
+            <li>Coverage breadth differs by stock. Snapshot scores are screening aids, not valuation models, and do not update automatically.</li>
             <li>Trailing P/E is not comparable across cyclical, pre-profit and recently restructured companies.</li>
             <li>The screen is global-thematic but US-listing-biased; several European and Asian leaders are underrepresented.</li>
             <li>No portfolio constraints, tax position, base currency or risk budget were provided.</li>
@@ -415,15 +434,15 @@
         <li><a href="https://www.worldbank.org/ext/en/topic/water">World Bank, Water</a> — global water and sanitation investment need.</li>
         <li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx">NVIDIA Q1 FY2027 results</a> — data-centre growth and platform evidence.</li>
         <li><a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial">Broadcom Q2 FY2026 results</a> — AI semiconductor growth and guidance.</li>
-        <li><a href="https://site.financialmodelingprep.com/developer/docs/stable/quote">Financial Modeling Prep quote API</a>, <a href="https://site.financialmodelingprep.com/developer/docs/stable/price-target-consensus">price-target consensus API</a> and <a href="https://site.financialmodelingprep.com/developer/docs/stable/grades-summary">grades consensus API</a> — automated prices, consensus targets and rating breadth after each US trading day.</li>
-        <li><a href="https://www.tipranks.com">TipRanks</a> — fallback research snapshot retrieved 27 July 2026; its proprietary Smart Score is not reproduced by the automated feed.</li>
+        <li><a href="https://www.tradingview.com/widget-docs/widgets/watchlists/market-overview/">TradingView Market Overview widget</a> — free branded current or exchange-delayed price display for the primary and extension boards.</li>
+        <li><a href="https://www.tipranks.com">TipRanks</a> — dated analyst-consensus, target and score research snapshot retrieved 27 July 2026. No TipRanks API or scraper is used.</li>
       </ol>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <b>Structural Scarcity v2 · research-priority report—not personal investment advice.</b> “Advance” means advance to deeper underwriting, not buy. Check the market-data timestamp before use; a dated fallback remains visible if an automated refresh fails. All percentages are analyst-implied price appreciation and exclude dividends, taxes, FX and transaction costs.
+      <b>Structural Scarcity v2 · research-priority report—not personal investment advice.</b> “Advance” means advance to deeper underwriting, not buy. TradingView prices may be exchange-delayed; analyst targets and target gaps are a dated 27 July 2026 snapshot. All percentages exclude dividends, taxes, FX and transaction costs.
     </div>
   </footer>
 
@@ -594,74 +613,6 @@
     };
     renderThemeCards();
 
-    const formatDate = iso => new Intl.DateTimeFormat("en-GB", {
-      day:"numeric", month:"long", year:"numeric", hour:"2-digit", minute:"2-digit",
-      timeZone:"America/New_York", timeZoneName:"short"
-    }).format(new Date(iso));
-
-    async function applyAutomatedMarketData() {
-      try {
-        const response = await fetch(`data/market.json?v=${Date.now()}`, {cache:"no-store"});
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const market = await response.json();
-        if (!market.lastUpdated || !market.stocks || !Object.keys(market.stocks).length) return;
-
-        scoreLabel = "Evidence score";
-        for (const pick of picks) {
-          const live = market.stocks[pick.ticker];
-          if (!live) continue;
-          pick.price = live.price;
-          pick.target = live.target;
-          pick.up = live.upside;
-          pick.cons = live.consensus;
-          pick.score = live.evidenceScore;
-          pick.best = `${live.coverage} analyst ratings`;
-        }
-        for (const row of raw) {
-          const live = market.stocks[row[0]];
-          if (!live) continue;
-          row[1] = live.upside;
-          row[2] = live.evidenceScore;
-          row[3] = live.consensus;
-        }
-        for (const theme of themeDetails) {
-          for (const candidate of [theme.a, theme.b]) {
-            const live = market.stocks[candidate[0]];
-            if (live) candidate[1] = `${live.upside >= 0 ? "+" : ""}${live.upside.toFixed(1)}%`;
-          }
-        }
-
-        document.querySelectorAll("#newlanes tbody tr").forEach(row => {
-          const ticker = row.querySelector("a.ticker")?.textContent.trim();
-          const live = market.stocks[ticker];
-          if (!live) return;
-          const cells = row.cells;
-          const nameLine = cells[1].querySelectorAll("div")[1];
-          if (nameLine) nameLine.textContent = `${live.name || ticker} · Evidence score ${live.evidenceScore}`;
-          cells[2].innerHTML = `<span class="badge ${badge(live.consensus)}">${live.consensus}</span><div class="tiny">${live.coverage} analyst ratings</div>`;
-          cells[3].textContent = `$${live.price.toFixed(2)} → $${live.target.toFixed(2)}`;
-          cells[4].textContent = `${live.upside >= 0 ? "+" : ""}${live.upside.toFixed(1)}%`;
-          cells[4].className = live.upside >= 0 ? "up" : "down";
-        });
-
-        const ranked = picks.filter(p => Number.isFinite(p.up)).sort((a,b)=>b.up-a.up);
-        if (ranked[0]) {
-          document.querySelector("#highestTargetGap").textContent = `${ranked[0].up >= 0 ? "+" : ""}${ranked[0].up.toFixed(0)}%`;
-          document.querySelector("#highestTargetLabel").textContent = `largest current target gap: ${ranked[0].name}`;
-        }
-        const updated = formatDate(market.lastUpdated);
-        const partial = market.status === "partial" ? " · partial refresh" : "";
-        document.querySelector("#marketDataStatus").textContent = `Market data: ${updated}${partial}`;
-        document.querySelector("#extensionDataNote").textContent = `Financial Modeling Prep refresh: ${updated}${partial}. Prices, consensus targets and analyst-rating counts update after each US trading day.`;
-        document.querySelector("#qualityDataNote").innerHTML = `Source: <a href="${market.source.quoteDocs}">FMP quotes</a>, <a href="${market.source.targetDocs}">consensus targets</a> and <a href="${market.source.ratingsDocs}">analyst ratings</a>. Refreshed ${updated}${partial}. Targets are not expected returns.`;
-        renderQuality();
-        renderRaw();
-        renderThemeCards();
-      } catch (error) {
-        console.warn("Automated market data unavailable; retaining the dated fallback snapshot.", error);
-      }
-    }
-    applyAutomatedMarketData();
   </script>
 </body>
 </html>
